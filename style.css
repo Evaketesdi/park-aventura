@@ -8,12 +8,14 @@ body {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+  color: rgb(62, 62, 62);
   margin: 0;
   padding: 0;
+  background-color: rgb(242, 241, 241);
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -28,7 +30,7 @@ body {
   width: 15rem;
   height: auto;
   border-radius: 50%;
-  margin: 5rem;
+  margin: 10rem;
 }
 .hamburger-menu {
   width: 4rem;
@@ -37,7 +39,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  margin: 5rem;
+  margin: 10rem;
   box-shadow: 0 0 60px 50px #ffffff;
 }
 
@@ -141,8 +143,7 @@ body {
   transition: opacity 1s, transform 3s;
 }
 
-.hero-content h1,
-p {
+.hero-content h1 {
   text-shadow: 0 0 20px #180101, 0 0 30px #180101, 0 0 40px #180101;
 }
 
@@ -154,7 +155,8 @@ p {
   font-size: 2rem;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.details-button:hover {
   background-color: rgba(1, 55, 15, 0.95);
   transform: scale(1.1);
   transition: 0.3s;
@@ -179,5 +181,56 @@ p {
   }
   100% {
     transform: scale(1);
+  }
+}
+main {
+  margin: 15rem;
+  display: flex;
+  gap: 15rem;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-basis: 55ch;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+section {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 90ch;
+}
+.title {
+  font-size: 3.5rem;
+}
+.opening-hours {
+  font-size: 1.8rem;
+  margin: auto;
+}
+.days {
+  display: flex;
+  padding: 0rem;
+  border-bottom: solid 0.1rem rgb(230, 229, 229);
+}
+.hours {
+  margin-left: auto;
+  font-weight: 600;
+}
+section p {
+  font-weight: 1.8rem;
+}
+.details-button {
+  background-color: orangered;
+  color: white;
+  padding: 1rem;
+  border-color: transparent;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
   }
 }
