@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+}
 html {
   font-size: 62.5%;
 }
@@ -196,6 +202,7 @@ aside {
   background-color: white;
   border-radius: 1rem;
   padding: 3rem;
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
 }
 section {
   flex: 1 1 90ch;
@@ -232,4 +239,43 @@ section p {
   main {
     flex-direction: column;
   }
+}
+.wrapper {
+  margin-inline: 3rem;
+  max-width: 1370px;
+  margin-inline: auto;
+}
+.grid-layout {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.col {
+  flex: 1;
+  display: grid;
+  gap: 2rem;
+  align-content: center;
+}
+.card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+  border-top: solid 0.5rem;
+}
+.border-red {
+  border-color: var(--red);
+}
+.border-cyan {
+  border-color: var(--cyan);
+}
+.border-orange {
+  border-color: var(--orange);
+}
+.border-blue {
+  border-color: var(--blue);
 }
