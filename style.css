@@ -260,6 +260,10 @@ section p {
   gap: 2rem;
   align-content: center;
 }
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 .card {
   padding: 2rem;
   background-color: white;
