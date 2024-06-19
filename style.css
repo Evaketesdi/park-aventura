@@ -161,8 +161,7 @@ body {
   font-size: 2rem;
 }
 
-.cta-button:hover,
-.details-button:hover {
+.cta-button:hover {
   background-color: rgba(1, 55, 15, 0.95);
   transform: scale(1.1);
   transition: 0.3s;
@@ -233,6 +232,20 @@ section p {
   border-color: transparent;
   border-radius: 0.5rem;
   margin-top: 3rem;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.details-button span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.details-button:hover span {
+  opacity: 1;
 }
 
 @media screen and (max-width: 900px) {
@@ -261,7 +274,7 @@ section p {
   align-content: center;
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-15px);
   transition: 0.3s;
 }
 .card {
